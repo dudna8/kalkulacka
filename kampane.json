@@ -1,0 +1,547 @@
+[
+ {
+  "kampan": "LCW",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCP",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCL",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCV",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCR",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MEI",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCQ",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "JP2",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MH4",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MEF",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LAK",
+  "viazanost": "24",
+  "vypocet": "25\/50"
+ },
+ {
+  "kampan": "LCC",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MHR",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MFQ",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LB8",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "HRN",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "MA3",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MHW",
+  "viazanost": "24",
+  "vypocet": 5
+ },
+ {
+  "kampan": "MAE",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MA2",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "HNE",
+  "viazanost": "12",
+  "vypocet": "4Cely"
+ },
+ {
+  "kampan": "LA5",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MG5",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MEG",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "ME7",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LA4",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LC4",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LBV",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LBU",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LAV",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LAU",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LC3",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCO",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LBX",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "HND",
+  "viazanost": "12",
+  "vypocet": "4Cely"
+ },
+ {
+  "kampan": "MDB",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LCN",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCS",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MCI",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "ME1",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MAI",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LBQ",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LBR",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "HNC",
+  "viazanost": "12",
+  "vypocet": "4Cely"
+ },
+ {
+  "kampan": "MB5",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MCG",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "LA6",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MGC",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MHK",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCM",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MF8",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MDD",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MFF",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MFJ",
+  "viazanost": "12",
+  "vypocet": 6
+ },
+ {
+  "kampan": "LA7",
+  "viazanost": "24",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MF7",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MHM",
+  "viazanost": "12",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LBT",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "MB2",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MA1",
+  "viazanost": "12",
+  "vypocet": 4
+ },
+ {
+  "kampan": "MFV",
+  "viazanost": "24",
+  "vypocet": 5
+ },
+ {
+  "kampan": "MA4",
+  "viazanost": "12",
+  "vypocet": 2
+ },
+ {
+  "kampan": "HR7",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "HS7",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "HN4",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "HN5",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "HNA",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "HMV",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "MD1",
+  "viazanost": "0",
+  "vypocet": 0
+ },
+ {
+  "kampan": "SBA",
+  "viazanost": "24",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "SBC",
+  "viazanost": "24",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "SAE",
+  "viazanost": "12",
+  "vypocet": "POS_25"
+ },
+ {
+  "kampan": "SBB",
+  "viazanost": "24",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "SAU",
+  "viazanost": "24",
+  "vypocet": "POS_10"
+ },
+ {
+  "kampan": "SAS",
+  "viazanost": "12",
+  "vypocet": "POS_25"
+ },
+ {
+  "kampan": "SAW",
+  "viazanost": "24",
+  "vypocet": "POS_10"
+ },
+ {
+  "kampan": "SAP",
+  "viazanost": "12",
+  "vypocet": "POS_25"
+ },
+ {
+  "kampan": "SAT",
+  "viazanost": "12",
+  "vypocet": "POS_15"
+ },
+ {
+  "kampan": "SAB",
+  "viazanost": "12",
+  "vypocet": "POS_25"
+ },
+ {
+  "kampan": "SAM",
+  "viazanost": "12",
+  "vypocet": "POS_25"
+ },
+ {
+  "kampan": "MI1",
+  "viazanost": "12",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "MI2",
+  "viazanost": "12",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "MI3",
+  "viazanost": "12",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "MI4",
+  "viazanost": "12",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "MI5",
+  "viazanost": "12",
+  "vypocet": "POS_P"
+ },
+ {
+  "kampan": "SCA",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "SBU",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "SVB",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "MIF",
+  "viazanost": "12",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "MIG",
+  "viazanost": "12",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "LBO",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "SBQ",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "SBR",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "JXC",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "JXE",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "SBO",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "MIB",
+  "viazanost": "12",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "MIC",
+  "viazanost": "12",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "LCZ",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDA",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LCY",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDY",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDH",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDW",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDS",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDK",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "LDG",
+  "viazanost": "24",
+  "vypocet": "P"
+ },
+ {
+  "kampan": "JXI",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ },
+ {
+  "kampan": "SBN",
+  "viazanost": "24",
+  "vypocet": "SPECIAL"
+ }
+]

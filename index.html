@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulačka</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="vstup">
+            <form onsubmit="return false;" method="post" name="myForm" id="my-form">
+                <label for="skratka">Skratka kampane:</label>
+                <input type="text" id="skratka" name="skratka"><br>
+                <label for="podpisanie">Dátum podpísania zmluvy:</label>
+                <input type="text" placeholder="dd-mm-yyyy" id="podpisanie" name="podpisanie"><br>
+                <label for="ukoncenie">Dátum ukončenia zmluvy:</label>
+                <input type="text" placeholder="dd-mm-yyyy" value="" id="ukoncenie" name="ukoncenie"><br>
+                <input type="checkbox" id="pvz" name="pvz" value="PVZ">
+                <label for="pvz">PVZ</label><br><br>
+                <input type="submit" class="button" name="submit" value="Vypočítaj">
+                <input type="reset" class="button" value="Reset">
+            </form>
+        </div>
+            
+        <div class="vystup">
+            <form>
+                <label for="dlzka">Dĺžka viazanosti v mesiacoch:</label>
+                <input type="text" id="dlzka" name="dlzka"><br>
+                <label for="vzorec">Pre túto kampaň platí vzorec:</label>
+                <input type="text" id="vzorec" name="vzorec"><br>
+                <label for="pokuta">Vypočítaná zmluvná pokuta:</label>
+                <input type="text" id="pokuta" name="pokuta">
+            </form>
+        </div>
+      </div>
+
+      <div class="header-title-logo">
+        <img src="UPC_logo.png">
+      </div>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script type="module" src="script.js"></script>
+</body>
+
+</html>

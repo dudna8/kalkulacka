@@ -1,0 +1,49 @@
+/* style reset */
+* { margin: 0;
+    padding: 0; 
+    font-family: Gotham, 'Times New Roman', sans-serif;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(HCo-Gotham-Rounded-SSm_400.ttf);
+  }
+
+body {
+    background-color: rgb(168, 208, 192);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    margin: auto;
+    padding: 70px 0;
+   }
+  
+  .vstup, .vystup { 
+    text-align: right;
+  }
+
+  .header-title-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20000;
+  }
+
+  label {
+    padding: 15px;
+  }
+
+  input {
+    margin-top: 15px;
+  }
+
+  .button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(35, 154, 152);
+    color: rgb(253, 196, 0);
+    font-size: 16px;
+  }
