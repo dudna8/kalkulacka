@@ -48,6 +48,9 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
 // 24 mesač = P = 120 - (2,5 * PM)
 // 12 mesač =  P = 120 - (5 * PM)
 
+// vzorec "4"
+// 4 € za každý začatý mesiac doby zvýhodnenia
+// 4 * (PM + 1)
 
 
 myForm.addEventListener("submit", function(e) {
@@ -76,15 +79,28 @@ myForm.addEventListener("submit", function(e) {
             console.log(`${podpisanieZmluvy} a ${120 - 2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
 
     // vzorec pre 24 mesacny vzorec "P"
+
             if (data[i].viazanost == 24 && data[i].vypocet == "P") {
                 let vysledokP24 = 120 - (2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
                 vysledokPokuta.setAttribute('value', vysledokP24);
             }
+
     // vzorec pre 12 mesacny vzorec "P"
+
             else if (data[i].viazanost == 12 && data[i].vypocet == "P") {
                 let vysledokP12 = 120 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
                 vysledokPokuta.setAttribute('value', vysledokP12);
             }
+    // vzorec pre vzorec "4"
+
+            else if (data[i].vypocet == "4") {
+                let vysledok4 = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                vysledokPokuta.setAttribute('value', vysledok4);
+            }
+    
+    // pridat 4 cely mesiac
+
+
         }
     }
 
