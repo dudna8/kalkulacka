@@ -48,14 +48,7 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
 // 24 mesač = P = 120 - (2,5 * PM)
 // 12 mesač =  P = 120 - (5 * PM)
 
-// const vzorecP = (vypocetP) => {
-//     if (data[i].viazanost === 24) {
-//         return 120 - (2.5 * PocetMesiacov);
-//     }
-//     else if (data[i].viazanost === 12) {
-//         return 120 - (5 * PocetMesiacov);
-//     }
-// }
+
 
 myForm.addEventListener("submit", function(e) {
     
@@ -66,17 +59,35 @@ myForm.addEventListener("submit", function(e) {
 
     let dlzkaViazanosti = document.getElementById("dlzka");
     let platiVzorec = document.getElementById("vzorec");
+    let vysledokPokuta = document.getElementById("pokuta");
+
+
 
 
     // for cyklus na dohladanie objektu kampane zadaneho v poli skratkaKampane [i]
 
     for(var i = 0; i < data.length; i++){
+
         if (skratkaKampane === data[i].kampan){
+
             dlzkaViazanosti.setAttribute('value', data[i].viazanost);
             platiVzorec.setAttribute('value', data[i].vypocet);
-            console.log(`${data[i].viazanost} a ${podpisanieZmluvy} a ${PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
+
+            console.log(`${podpisanieZmluvy} a ${120 - 2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
+
+    // vzorec pre 24 mesacny vzorec "P"
+            if (data[i].viazanost == 24 && data[i].vypocet == "P") {
+                let vysledokP24 = 120 - (2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                vysledokPokuta.setAttribute('value', vysledokP24);
+            }
+    // vzorec pre 12 mesacny vzorec "P"
+            else if (data[i].viazanost == 12 && data[i].vypocet == "P") {
+                let vysledokP12 = 120 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                vysledokPokuta.setAttribute('value', vysledokP12);
+            }
+        }
     }
-}
+
 
 
 
