@@ -1,7 +1,7 @@
 // import data from './kampane.json' assert {type: 'json'};
-import data from '../kampane.json' assert {type: 'json'};
+import data from './kampane.json' assert {type: 'json'};
 
-// console.log(data[0].kampan);
+ console.log(data.length);
 
 
 
@@ -14,12 +14,12 @@ import data from '../kampane.json' assert {type: 'json'};
 
 
 
-    var txt = document.getElementById('skratka').innerHTML;
-        for(var i = 0; i < data.lenght; i++){
-            if (skratka === data[i].kampan){
-            console.log(data[i].viazanost);
-    }
-}
+//     var txt = document.getElementById('skratka').innerHTML;
+//         for(var i = 0; i < data.lenght; i++){
+//             if (skratka === data[i].kampan){
+//             console.log(data[i].viazanost);
+//     }
+// }
 
 // vypocita, kolko mesiacov ubehlo od podpisania po ukoncenie zmluvy
 
@@ -44,18 +44,37 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
     return (d2M+12*d2Y)-(d1M+12*d1Y);
 }
 
-myForm.addEventListener("submit", function(e) {
+// vypocet sankcie pre vzorec "P" 
+// 24 mesač = P = 120 - (2,5 * PM)
+// 12 mesač =  P = 120 - (5 * PM)
 
+// const vzorecP = (vypocetP) => {
+//     if (data[i].viazanost === 24) {
+//         return 120 - (2.5 * PocetMesiacov);
+//     }
+//     else if (data[i].viazanost === 12) {
+//         return 120 - (5 * PocetMesiacov);
+//     }
+// }
+
+myForm.addEventListener("submit", function(e) {
+    
     const inputs = document.getElementById("my-form").elements;
     const skratkaKampane = inputs["skratka"].value;
     const podpisanieZmluvy = inputs["podpisanie"].value;
     const ukoncenieZmluvy = inputs["ukoncenie"].value;
 
+    let dlzkaViazanosti = document.getElementById("dlzka");
+    let platiVzorec = document.getElementById("vzorec");
+
+
     // for cyklus na dohladanie objektu kampane zadaneho v poli skratkaKampane [i]
 
     for(var i = 0; i < data.length; i++){
-        if (skratkaKampane === data[i].kampan && data[i].viazanost === 24){
-          //  console.log(`${data[i].viazanost} a ${podpisanieZmluvy} a ${PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
+        if (skratkaKampane === data[i].kampan){
+            dlzkaViazanosti.setAttribute('value', data[i].viazanost);
+            platiVzorec.setAttribute('value', data[i].vypocet);
+            console.log(`${data[i].viazanost} a ${podpisanieZmluvy} a ${PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
     }
 }
 
