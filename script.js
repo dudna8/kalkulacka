@@ -43,14 +43,28 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
 
     return (d2M+12*d2Y)-(d1M+12*d1Y);
 }
+/* Výpočty vzorcov:
+ vzorec "P" 
+ 24 mesač = P = 120 - (2,5 * PM)
+ 12 mesač =  P = 120 - (5 * PM)
 
-// vypocet sankcie pre vzorec "P" 
-// 24 mesač = P = 120 - (2,5 * PM)
-// 12 mesač =  P = 120 - (5 * PM)
+ vzorec "4"
+ 4 € za každý začatý mesiac doby zvýhodnenia
+ 4 * (PM + 1)
 
-// vzorec "4"
-// 4 € za každý začatý mesiac doby zvýhodnenia
-// 4 * (PM + 1)
+ vzorec "5"
+ 5 € za každý začatý mesiac doby zvýhodnenia
+ 5 * (PM + 1)
+
+ vzorec "6"
+ 6 € za každý začatý mesiac doby zvýhodnenia
+ 6 * (PM + 1)
+
+ vzorec "2"
+ 2 € za každý začatý mesiac doby zvýhodnenia(TEL)
+ 2 * (PM + 1)
+*/
+
 
 
 myForm.addEventListener("submit", function(e) {
@@ -115,9 +129,9 @@ myForm.addEventListener("submit", function(e) {
             }         
             
 
-    // vzorec "4"
+    // vzorec "4" a "4Cely"
 
-            else if (data[i].vypocet == "4") {
+            else if (data[i].vypocet == "4" || data[i].vypocet == "4Cely") {
 
                 if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
                     let vysledok = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
@@ -134,6 +148,68 @@ myForm.addEventListener("submit", function(e) {
                 }
             }
     
+    // vzorec "5"
+            else if (data[i].vypocet == "5") {
+
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else if (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);                    
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                    
+                }
+            }
+
+    // vzorec "6"
+
+            else if (data[i].vypocet == "6") {
+
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 6 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else if (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 6 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);                    
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                    
+                }
+            }
+
+    // vzorec "2"
+
+            else if (data[i].vypocet == "2") {
+
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 2 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else if (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 2 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);                    
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                    
+                }
+            }
+
+
+
+
+
+
+
 
 
 
