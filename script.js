@@ -63,6 +63,18 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
  vzorec "2"
  2 € za každý začatý mesiac doby zvýhodnenia(TEL)
  2 * (PM + 1)
+
+ vzorec "POS_P"
+ 24 mesač = P = 120 - (5 * PM)
+ 12 mesač = P = 60 - (5 * PM)
+
+ vzorec "POS_10"
+ 10 € za každy celý mesiac do uplynutia doby určitej
+ 10 * POS_PM24
+
+ vzorec "POS_25"
+ 25 € za každy celý mesiac do uplynutia doby určitej
+ 25 * POS_PM12
 */
 
 
@@ -203,11 +215,63 @@ myForm.addEventListener("submit", function(e) {
                     alert('Tento klient už nie je vo viazanosti.');                    
                 }
             }
+    // vzorec "POS_P"
 
+            else if (data[i].vypocet == "POS_P") {
 
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 120 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                // else if 
+                //     (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) == 24 && (d1.getDate() - d2.getDate()) > 0) {
+                //     let vysledok = 120 - (2.5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)));
+                //     vysledokPokuta.setAttribute('value', vysledok);
+                //     }
+                else if
+                    (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 60 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);     
+                    }
+                // else if 
+                //     (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) == 12 && (d1.getDate() - d2.getDate()) > 0) {
+                //     let vysledok = 120 - (5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1));
+                //     vysledokPokuta.setAttribute('value', vysledok);  
+                //     }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');
+                    }
+            }         
 
+    // vzorec "POS_10"
 
+            else if (data[i].vypocet == "POS_10") {
+                if ((24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) < 24 && (24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) > 0) {
+                    let vysledok = 10 * (24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                   
+                }
+            }
 
+    // vzorec "POS_25"
+
+            else if (data[i].vypocet == "POS_25") {
+                if ((12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) < 12 && (12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) > 0) {
+                    let vysledok = 25 * (12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                   
+                }
+            }
 
 
 
