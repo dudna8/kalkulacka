@@ -111,21 +111,35 @@ myForm.addEventListener("submit", function(e) {
                     let vysledok = 0;
                     vysledokPokuta.setAttribute('value', vysledok);
                     alert('Tento klient už nie je vo viazanosti.');
-                }             
-            }
+                    }
+            }         
+            
 
     // vzorec "4"
 
             else if (data[i].vypocet == "4") {
-                let vysledok4 = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
-                vysledokPokuta.setAttribute('value', vysledok4);
+
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                else if (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
+                    vysledokPokuta.setAttribute('value', vysledok);                    
+                }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');                    
+                }
             }
     
 
 
 
+            }
         }
-    }
+    
 
 
 
