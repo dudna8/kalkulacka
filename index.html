@@ -12,13 +12,23 @@
         <div class="vstup">
             <form onsubmit="return false;" method="post" name="myForm" id="my-form">
                 <label for="skratka">Skratka kampane:</label>
-                <input type="text" id="skratka" name="skratka" value="MH4"><br>
+                <input type="text" id="skratka" name="skratka" value="SBN"><br>
                 <label for="podpisanie">Dátum podpísania zmluvy:</label>
-                <input type="text" placeholder="dd-mm-yyyy" id="podpisanie" name="podpisanie" value="1.1.2020"><br>
+                <input type="text" placeholder="dd-mm-yyyy" id="podpisanie" name="podpisanie" value="5.1.2020"><br>
                 <label for="ukoncenie">Dátum ukončenia zmluvy:</label>
-                <input type="text" placeholder="dd-mm-yyyy" id="ukoncenie" name="ukoncenie" value="1.5.2020"><br>
+                <input type="text" placeholder="dd-mm-yyyy" id="ukoncenie" name="ukoncenie" value="4.10.2021"><br>
                 <input type="checkbox" id="pvz" name="pvz" value="PVZ">
                 <label for="pvz">PVZ</label><br><br>
+                <div class="POS">
+                    <label for="poplatok">Mesačný poplatok pri POS:</label>
+                    <input type="text" id="poplatok" name="poplatok"><br>
+                    <label for="suma_v_zlave">Aká bola mesačná suma v zľave:</label>
+                    <input type="text" id="suma_v_zlave" name="suma_v_zlave"><br>
+                    <label for="kolko_mesiacov">Koľko mesiacov mal klient zľavu:</label>
+                    <input type="text" id="kolko_mesiacov" name="kolko_mesiacov"><br>
+                    <input type="checkbox" id="alikvota" name="alikvota">
+                    <label for="alikvota">Počítanie alikvóty na dni</label>
+                </div>
                 <input type="submit" class="button" name="submit" value="Vypočítaj">
                 <input type="reset" class="button" value="Reset">
             </form>

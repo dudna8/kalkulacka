@@ -75,6 +75,9 @@ function PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) {
  vzorec "POS_25"
  25 € za každy celý mesiac do uplynutia doby určitej
  25 * POS_PM12
+
+ vzorec "SPECIAL"
+ nove POS kampane kde sa platí cena služby každý ostávajúci mesiac do uplynutia doby viazanosti
 */
 
 
@@ -273,8 +276,56 @@ myForm.addEventListener("submit", function(e) {
                 }
             }
 
+    // vzorec "SPECIAL"
+
+            else if (data[i].vypocet == "SPECIAL") {
+
+                if (document.getElementById('alikvota').checked == false) {
+                    
+                    if (document.getElementById('suma_v_zlave').value == "0") {
+
+                        if (data[i].viazanost == 24) {
+
+                            if ((24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) < 24 && (24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) > 0) {
+                                let vysledok = document.getElementById('poplatok').value * (24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                                vysledokPokuta.setAttribute('value', vysledok);
+                            }
+                            else if ((24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) == 0) {
+                                let vysledok = document.getElementById('poplatok').value * ((24 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) + 1);
+                                vysledokPokuta.setAttribute('value', vysledok);
+                            }
+                            else {
+                                alert('Tento klient už nie je vo viazanosti.');
+                            }
+
+                        }
+
+                        else if (data[i].viazanost == 12) {
+
+                            if ((12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) < 12 && (12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) > 0) {
+                                let vysledok = document.getElementById('poplatok').value * (12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                                vysledokPokuta.setAttribute('value', vysledok);
+                            }
+                            else if ((12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) == 0) {
+                                let vysledok = document.getElementById('poplatok').value * ((12 - PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)) + 1);
+                                vysledokPokuta.setAttribute('value', vysledok);
+                            }
+                            else {
+                                alert('Tento klient už nie je vo viazanosti.');
+                            }
+
+                        }                        
+
+                    }
+
+                }
 
 
+
+
+
+
+            }
 
 
             }
