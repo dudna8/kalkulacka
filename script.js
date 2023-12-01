@@ -64,7 +64,13 @@ myForm.addEventListener("submit", function(e) {
     let platiVzorec = document.getElementById("vzorec");
     let vysledokPokuta = document.getElementById("pokuta");
 
+    let dateString1 = podpisanieZmluvy
+    let [day1, month1, year1] = dateString1.split('.')
+    const d1 = new Date(+year1, +month1 -1, +day1)
 
+    let dateString2 = ukoncenieZmluvy
+    let [day2, month2, year2] = dateString2.split('.')
+    const d2 = new Date( +year2, +month2 -1, +day2)
 
 
     // for cyklus na dohladanie objektu kampane zadaneho v poli skratkaKampane [i]
@@ -76,29 +82,46 @@ myForm.addEventListener("submit", function(e) {
             dlzkaViazanosti.setAttribute('value', data[i].viazanost);
             platiVzorec.setAttribute('value', data[i].vypocet);
 
-            console.log(`${podpisanieZmluvy} a ${120 - 2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
+            console.log(`${d1.getDate() - d2.getDate()} a ${120 - 2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)}`);
 
-    // vzorec pre 24 mesacny vzorec "P"
+    // vzorec "P"
 
-            if (data[i].viazanost == 24 && data[i].vypocet == "P") {
-                let vysledokP24 = 120 - (2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
-                vysledokPokuta.setAttribute('value', vysledokP24);
+            if (data[i].vypocet == "P") {
+
+                if (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 24) {
+                    let vysledok = 120 - (2.5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);
+                }
+                // else if 
+                //     (data[i].viazanost == 24 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) == 24 && (d1.getDate() - d2.getDate()) > 0) {
+                //     let vysledok = 120 - (2.5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy)));
+                //     vysledokPokuta.setAttribute('value', vysledok);
+                //     }
+                else if
+                    (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) <= 12) {
+                    let vysledok = 120 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
+                    vysledokPokuta.setAttribute('value', vysledok);     
+                    }
+                // else if 
+                //     (data[i].viazanost == 12 && PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) == 12 && (d1.getDate() - d2.getDate()) > 0) {
+                //     let vysledok = 120 - (5 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1));
+                //     vysledokPokuta.setAttribute('value', vysledok);  
+                //     }
+                else {
+                    let vysledok = 0;
+                    vysledokPokuta.setAttribute('value', vysledok);
+                    alert('Tento klient už nie je vo viazanosti.');
+                }             
             }
 
-    // vzorec pre 12 mesacny vzorec "P"
-
-            else if (data[i].viazanost == 12 && data[i].vypocet == "P") {
-                let vysledokP12 = 120 - (5 * PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy));
-                vysledokPokuta.setAttribute('value', vysledokP12);
-            }
-    // vzorec pre vzorec "4"
+    // vzorec "4"
 
             else if (data[i].vypocet == "4") {
                 let vysledok4 = 4 * (PocetMesiacov(podpisanieZmluvy, ukoncenieZmluvy) + 1);
                 vysledokPokuta.setAttribute('value', vysledok4);
             }
     
-    // pridat 4 cely mesiac
+
 
 
         }
